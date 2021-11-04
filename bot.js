@@ -1,6 +1,7 @@
 /* In developement */
 
 if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
+  Game.CloseNotes();
   console.log("Copyright (c) 2021 eunhyobenjaminkim");
   document.getElementById("bakeryName").click();
   document.getElementById("bakeryNameInput").value = "Bot";

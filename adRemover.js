@@ -1,5 +1,4 @@
-/* Ad Remover By: Benjamin Kim */
-/* Open Console (CTRL + SHIFT + J) in Cookie Clicker and Copy/Paste the following. */
+/* Removes Pop-Up ads */
 
 document.getElementById("smallSupport").remove();
 document.getElementById("support").remove();

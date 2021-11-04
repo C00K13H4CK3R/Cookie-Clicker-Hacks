@@ -1,7 +1,10 @@
 /* In developement */
-console.log("Copyright (c) 2021 eunhyobenjaminkim");
-document.getElementById("bakeryName").click();
-document.getElementById("bakeryNameInput").value = "Bot";
-document.getElementById("promptOption0").click();
-Game.OpenSesame();
-Game.Notify('Using Bots isn\'t cheating... is it?','Cheated cookies tastes just fine.',[12,0]);
+
+if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
+  console.log("Copyright (c) 2021 eunhyobenjaminkim");
+  document.getElementById("bakeryName").click();
+  document.getElementById("bakeryNameInput").value = "Bot";
+  document.getElementById("promptOption0").click();
+  Game.OpenSesame();
+  Game.Notify('Using Bots isn\'t cheating... is it?','Cheated cookies tastes just fine.',[12,0]);
+}

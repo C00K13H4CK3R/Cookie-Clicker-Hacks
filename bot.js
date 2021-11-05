@@ -6,7 +6,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   document.getElementById("bakeryName").click();
   document.getElementById("bakeryNameInput").value = "Bot";
   document.getElementById("promptOption0").click();
-  Game.OpenSesame();
+  Game.addClass("elderWrath");
   Game.Notify('Using Bots isn\'t cheating... is it?','Cheated cookies tastes just fine.',[12,0]);
   
   /* For clicking cookies */
@@ -33,7 +33,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
     }
     cheapestProduct.buy();
     currentProduct = 0;
-}
-var autoBuy = setInterval(buyProduct, 500);
-
+  }
+  var autoBuy = setInterval(buyProduct, 500);
+ 
 }

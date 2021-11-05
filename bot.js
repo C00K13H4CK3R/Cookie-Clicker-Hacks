@@ -18,4 +18,6 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
         if (shimmer.type == "golden") { shimmer.pop() }
     })
 }, 500);
+  
+  
 }

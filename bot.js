@@ -12,6 +12,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   
   /* For clicking cookies */
   var autoClicker = setInterval(Game.ClickCookie, 100);
+  /* --- */
   
   /* For clicking gold cookies */
   setInterval(function() {
@@ -19,6 +20,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
         if (shimmer.type == "golden") { shimmer.pop() }
     })
 }, 500);
+  /* --- */
   
   /* Auto buys the cheapest product */ 
   var cheapestProduct = 0;
@@ -36,5 +38,6 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   }
   
   var autoBuy = setInterval(buyProduct, 100);
+  /* --- */
  
 }

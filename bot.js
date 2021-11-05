@@ -19,5 +19,21 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
     })
 }, 500);
   
-  
+  /* Auto buys the cheapest product */ 
+  //im working on this right now. cheapestProduct = Game.ObjectById[currentProduct]; dosent work and if statement has bugs with big numbers.
+  var cheapestProduct = Game.ObjectsById[0];
+  var currentProduct = 0;
+  function buyProduct() {
+    var productVariety = Game.ObjectsById.length;
+    while (currentProduct < productVariety) {
+        if (Game.ObjectsById[currentProduct].price < cheapestProduct.price) {
+            cheapestProduct = Game.ObjectById[currentProduct];
+        }
+        currentProduct ++;
+    }
+    cheapestProduct.buy();
+    currentProduct = 0;
+}
+var autoBuy = setInterval(buyProduct, 500);
+
 }

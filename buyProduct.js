@@ -4,5 +4,5 @@ var productIdNum = prompt("Enter product number. (For Example, \n Cursor = 0, \n
 function buy() {
     document.getElementById("product" + productIdNum).click();
 }
-
+ 
 setInterval(buy, 250);

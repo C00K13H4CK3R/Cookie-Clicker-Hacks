@@ -40,3 +40,4 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   /* --- */
  
 }
+

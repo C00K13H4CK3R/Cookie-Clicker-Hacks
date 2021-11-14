@@ -7,8 +7,8 @@ function buyUpgrades() {
    while (upgradeNum < upgradeLength) {
        Game.UpgradesById[upgradeNum].click(event);
        upgradeNum ++;
+       Game.ClosePrompt();
    }
 }
 
-PlaySound('snd/tick.mp3');Game.ClosePrompt();
 setInterval(buyUpgrades, 100);

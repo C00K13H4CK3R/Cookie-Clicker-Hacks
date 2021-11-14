@@ -6,7 +6,6 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   document.getElementById("bakeryName").click();
   document.getElementById("bakeryNameInput").value = "Bot";
   document.getElementById("promptOption0").click();
-  Game.addClass("elderWrath");
   Game.OpenSesame();
   Game.Notify('Using Bots isn\'t cheating... is it?','Cheated cookies tastes just fine.',[12,0]);
   

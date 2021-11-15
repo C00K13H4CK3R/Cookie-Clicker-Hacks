@@ -21,6 +21,15 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
 }, 500);
   /* --- */
   
+  /* For clicking wrinklers */
+  var wrinklerClick= setInterval(function() {
+  for (var i=0;i<12;i++) {
+      if (Game.wrinklers[i].close==1) {
+        Game.wrinklers[i].hp--
+        }
+      }
+  }, 100);
+  
   /* Auto buys the cheapest product */ 
   var cheapestProduct = 0;
   var currentProduct = 0;

@@ -38,6 +38,37 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   
   var autoBuy = setInterval(buyProduct, 100);
   /* --- */
+  
+  /* Auto buys the cheapest upgrades */
+  var cheapestUpgrade = 0;
+  var currentUpgrade = 0;
+  function buyUpgrade() {
+    var upgradeVariety = Game.UpgradesById.length;
+    while (currentUpgrade < upgradeVariety) {
+      if (Game.UpgradesById[currentUpgrade].getPrice() < Game.UpgradesById[cheapestUpgrade].getPrice) {
+        cheapestUpgrade = currentUpgrade;
+      }
+      currentUpgrade ++;
+    }
+    Game.UpgradesById[cheapestUpgrade].click(event);
+    currentUpgrade = 0;
+    Game.ClosePrompt();
+  }
+    
+    // ----
+  
+  var upgradeNum = 0;
+  function buyUpgrades() {
+   var upgradeLength = Game.UpgradesById.length;
+   while (upgradeNum < upgradeLength) {
+       Game.UpgradesById[upgradeNum].click(event);
+       upgradeNum ++;
+       Game.ClosePrompt();
+   }
+}
+
+setInterval(buyUpgrades, 100);
+  /* --- */
  
 }
 

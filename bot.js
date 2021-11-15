@@ -6,7 +6,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   document.getElementById("bakeryName").click();
   document.getElementById("bakeryNameInput").value = "Bot";
   document.getElementById("promptOption0").click();
-  Game.OpenSesame();
+  Game.UpgradesById[414].choicesPick(9);Game.choiceSelectorOn=-1;Game.UpgradesById[414].buy();
   Game.Notify('Using Bots isn\'t cheating... is it?','Cheated cookies tastes just fine.',[12,0]);
   
   /* For clicking cookies */
@@ -39,35 +39,18 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   var autoBuy = setInterval(buyProduct, 100);
   /* --- */
   
-  /* Auto buys the cheapest upgrades */
-  var cheapestUpgrade = 0;
+  /* Auto buys upgrade */
   var currentUpgrade = 0;
   function buyUpgrade() {
-    var upgradeVariety = Game.UpgradesById.length;
-    while (currentUpgrade < upgradeVariety) {
-      if (Game.UpgradesById[currentUpgrade].getPrice() < Game.UpgradesById[cheapestUpgrade].getPrice) {
-        cheapestUpgrade = currentUpgrade;
-      }
+   var upgradeVariety = Game.UpgradesById.length;
+   while (currentUpgrade < upgradeVariety) {
+      Game.UpgradesById[currentUpgrade].buy();
       currentUpgrade ++;
-    }
-    Game.UpgradesById[cheapestUpgrade].click(event);
-    currentUpgrade = 0;
-    Game.ClosePrompt();
-  }
-    
-    // ----
-  
-  var upgradeNum = 0;
-  function buyUpgrades() {
-   var upgradeLength = Game.UpgradesById.length;
-   while (upgradeNum < upgradeLength) {
-       Game.UpgradesById[upgradeNum].click(event);
-       upgradeNum ++;
-       Game.ClosePrompt();
+      Game.ClosePrompt();
+      }
    }
-}
 
-setInterval(buyUpgrades, 100);
+var autoUpgrade = setInterval(buyUpgrade, 100);
   /* --- */
  
 }

@@ -48,6 +48,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
   var autoBuy = setInterval(buyProduct, 100);
   /* --- */
   
+  //Does not currently work. The previous code seems to be overriding this.
   /* Auto buys upgrade */
   var currentUpgrade = 0;
   function buyUpgrade() {
@@ -59,7 +60,7 @@ if (window.location.href == "https://orteil.dashnet.org/cookieclicker/") {
       }
    }
 
-var autoUpgrade = setInterval(buyUpgrade, 100);
+   var autoUpgrade = setInterval(buyUpgrade, 100);
   /* --- */
  
 }
